@@ -113,13 +113,5 @@ class MainController extends AbstractController
         return $os_platform;
     }
 
-    public function indexAction(Request $request)
-    {
-        $user=$this->getUser();
-        $user->$this->setTimeSpentOnPage( $request->request->get('timeSpent'));
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($user);
-        $em->flush();
-
-    }
+  
 }

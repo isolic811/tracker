@@ -6,19 +6,6 @@
 {% endblock %}
     {% block javascripts %}
 
-        <script>
-            $(document).ready(function() {
-                var start = new Date();
 
-                $(window).unload(function() {
-                    var end = new Date();
-                    $.ajax({
-                        url: "log.php",
-                        data: {'timeSpent': end - start},
-                        async: false
-                    })
-                });
-            });
-        </script>
 
     {% endblock %}
